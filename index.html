@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrew Lee</title>
+        <!-- Tailwind CSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Custom CSS for dark mode -->
+        <style>
+            .dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
+            }
+            .social-icons a {
+            margin: 0 20px;
+            }
+            .size-6 {
+                width: 24px; /* Adjust size as needed */
+                height: 24px;
+            }
+            .social-icons a.disabled {
+                pointer-events: none; /* Makes the link unclickable */
+                opacity: 0.5; /* Makes the icon semi-transparent */
+            }
+            .hidden {
+                display: none;
+            }
+            .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }.container {
+            max-width: 1200px; /* Limit the width of the content */
+            margin: 0 auto; /* Center the container */
+            padding: 0 1rem; /* Add some horizontal padding */
+        }
+        .main-content {
+            text-align: center; /* Center the text */
+        }
+        </style>
+    </head>
+<body class="transition-colors duration-300">
+    <!-- Toggle Button -->
+    <!-- Your HTML content here -->
+    <div class="flex flex-col min-h-[100dvh]">
+        <header class="px-4 lg:px-6 h-14 flex items-center">
+            <nav class="ml-auto flex gap-4 sm:gap-6">
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="#" style="font-size: 18px;">About</a>
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="./resume_lee.andrew.pdf" target="_blank" style="font-size: 18px;">Resume</a>
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="research.html" style="font-size: 18px;">Projects</a>
+            </nav>
+            <div class="flex justify-end p-4">
+                <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded focus:outline-none">
+                    <!-- Sun Icon for Bright Mode (Heroicons) -->
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+                    <!-- Moon Icon for Dark Mode (Heroicons) -->
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section id="about" class="w-full py-12 md:py-24 lg:py-32">
+                <div class="container px-4 md:px-6">
+                    <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+                        <div class="flex flex-col justify-center space-y-4">
+                            <div class="space-y-2">
+                                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Andrew Lee</h1>
+                                <p class="max-w-[600px] text-muted-foreground md:text-xl">
+                                    I am a fourth-year undergraduate student at William & Mary studying mathematics and data science. 
+                                    My undergraduate education has trained me both in theoretical and applied aspects of statistics. My past research experiences tackled
+                                    challenges in various fields (such as aerospace, ecology, and human behaviour) through statistical learning. 
+                                </p>
+
+                                <p class="max-w-[600px] text-muted-foreground md:text-xl">
+                                    I plan to pursue a graduate degree in quantitative field to 
+                                    enhance my ability to conduct independent research, 
+                                    develop advanced statistical models, and contribute 
+                                    to meaningful scientific discoveries.
+                                </p>
+
+                                <hr>
+                                <p class="max-w-[600px] text-muted-foreground md:text-xl">
+                                        <i>BSc in Mathematics</i>, <b>William & Mary</b> (2019 - Present) 
+                                </p>
+
+                                <style>
+                                    p {
+                                        padding-bottom: 20px; /* Adjust the spacing as needed */
+                                    }
+                                </style>
+
+                                <div class="flex justify-start social-icons">
+                                    <a href="lee.andrew.jooyoung@gmail.com" aria-label="Email" style="font-size: 30px" target="_blank" rel="noopener noreferrer";>
+                                        <i class="fas fa-envelope icon"></i>
+                                    </a>
+                                    <a href="https://scholar.google.com/" aria-label="Google Scholar" style="font-size: 30px" target="_blank" rel="noopener noreferrer"; class="disabled">
+                                        <i class="fas fa-graduation-cap icon"></i>
+                                    </a>
+                                    <a href="https://github.com/leeanddrew" aria-label="GitHub" style="font-size: 30px" target="_blank" rel="noopener noreferrer";>
+                                        <i class="fab fa-github icon"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/leeanddrew" aria-label="LinkedIn" style="font-size: 30px" target="_blank" rel="noopener noreferrer";>
+                                        <i class="fab fa-linkedin icon"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./profile.jpg" alt="Hero" class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square" style="width: 350px; height: 350px;" />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    
+
+    <!-- JavaScript to handle the theme toggle -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            sunIcon.classList.toggle('hidden');
+            moonIcon.classList.toggle('hidden');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
+
+        // Apply the saved theme on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+    </script>
+
+<footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+    <p class="text-xs text-muted-foreground">Last Updated: Aug 2024.</p>
+    <nav class="sm:ml-auto flex gap-4 sm:gap-6"></nav>
+  </footer>
+
+
+
+
+</body>
+</html>

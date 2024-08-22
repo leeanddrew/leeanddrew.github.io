@@ -1,0 +1,419 @@
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/4Honz1QxcQ3
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrew Lee</title>
+        <!-- Tailwind CSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Custom CSS for dark mode -->
+        <style>
+            .dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+            .icon {
+                width: 24px;
+                height: 24px;
+            }
+            .social-icons a {
+            margin: 0 20px;
+            }
+            .size-6 {
+                width: 24px; /* Adjust size as needed */
+                height: 24px;
+            }
+            .social-icons a.disabled {
+                pointer-events: none; /* Makes the link unclickable */
+                opacity: 0.5; /* Makes the icon semi-transparent */
+            }
+            .hidden {
+                display: none;
+            }
+            .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }.container {
+            max-width: 1200px; /* Limit the width of the content */
+            margin: 0 auto; /* Center the container */
+            padding: 0 1rem; /* Add some horizontal padding */
+        }
+        .main-content {
+            text-align: center; /* Center the text */
+        }
+        /* Zoom effect for project cards */
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        </style>
+    </head>
+
+    <body class="transition-colors duration-300">
+        <!-- Toggle Button -->
+        <!-- Your HTML content here -->
+
+<div class="flex flex-col min-h-dvh bg-background">
+    <!-- Toggle Button -->
+    <!-- Your HTML content here -->
+    <div class="flex flex-col min-h-[100dvh]">
+        <header class="px-4 lg:px-6 h-14 flex items-center">
+            <nav class="ml-auto flex gap-4 sm:gap-6">
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="./index.html" style="font-size: 18px;">About</a>
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="./resume_lee.andrew.pdf" target="_blank" style="font-size: 18px;">Resume</a>
+                <a class="text-sm font-medium hover:underline underline-offset-4" href="research.html" style="font-size: 18px;">Projects</a>
+            </nav>
+            <div class="flex justify-end p-4">
+                <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded focus:outline-none">
+                    <!-- Sun Icon for Bright Mode (Heroicons) -->
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hidden">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg>
+                    <!-- Moon Icon for Dark Mode (Heroicons) -->
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+    <main class="flex-1 py-12 md:py-24 lg:py-32">
+      <div class="container grid gap-12 px-4 md:px-6">
+        <div class="space-y-4 text-center">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Data Science Projects</h1>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+                Computer Vision in Ecology
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                Applied object detection to efficiently count migratory birds in aerial images of the Platte River of Nebraska.
+              </p><br><br>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>PyTorch, OpenCV, LabelStudio, Ultralytics</span>
+              </div>
+              <img
+                src="./Screenshot 2024-08-09 at 10.52.28 AM.png"
+                width="400"
+                height="400"
+                style=""
+                alt="Predictive Maintenance Chart"
+                class="w-full aspect-[4/3] object-cover rounded-md"
+              />
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+                Google Search Analysis: 
+                <br>
+                Wildfire Behavior
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                Carried out data analysis and collection to better understand exposures and behavioral responses to wildfire smoke by forecasting Google search rates of ten public health associated keywords.
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>R, Python, Selenium (web-scrape) </span>
+              </div>
+              <img
+                src="./heatmap_plot.png"
+                width="600"
+                height="450"
+                alt="Customer Churn Analysis Chart"
+                class="w-full aspect-[4/3] object-cover rounded-md"
+              />
+              <br>
+              <img
+              src="./obsvpred.png"
+              width="600"
+              height="450"
+              alt="Customer Churn Analysis Chart"
+              class="w-full aspect-[4/3] object-cover rounded-md"
+            />
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">ML in Hypersonic Vehicles:
+                <br> Predicting STLE 
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                Designed and trained a deep neural network architecture for predicting the Shock Train Leading Edge (STLE) of hypersonic vehicles – a direct interest of the NASA Langley Center.
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>Python, TensorFlow, scikit-learn, MATLAB</span>
+              </div>
+              <img
+                src="./stle1.png"
+                width="600"
+                height="600"
+                alt="Sentiment Analysis Chart"
+                class="w-full aspect-square object-cover rounded-md"
+              />
+              <br>
+              <img
+                src="./stle2.png"
+                width="600"
+                height="600"
+                alt="Sentiment Analysis Chart"
+                class="w-full aspect-square object-cover rounded-md"
+              />
+              <br>
+              <img
+                src="./stle3.png"
+                width="600"
+                height="600"
+                alt="Sentiment Analysis Chart"
+                class="w-full aspect-square object-cover rounded-md"
+              />
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+                Data Visualization:
+                <br> World Happiness Score Report
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                The World Happiness Report Project analyzes the happiness scores across the globe, and visualizes the trend involved throughout the years of 2005 to 2021. Additional case-study and regression analysis is conducted as well.
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>Tableau, Matplotlib, seaborn, Plotly, HTML, CSS</span>
+              </div>
+              <img
+                src="./whs1.png"
+                width="600"
+                height="450"
+                alt="Recommendation System Chart"
+                style=""
+                class="w-full aspect-[4/3] object-cover rounded-md"
+              />
+              <br>
+              <img
+                src="./whs2.png"
+                width="600"
+                height="600"
+                alt="Sentiment Analysis Chart"
+                class="w-full aspect-square object-cover rounded-md"
+              />
+            </div>
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+                Regression Analysis:
+                <br> Modeling Automobile
+                <br> Fuel Efficiency
+              </h3>
+              <p class="text-sm text-muted-foreground">
+                Surveys methods of regression such as variable selection/transformation, hypothesis testing, and cross-validation.
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>R</span>
+              </div>
+            </div>
+            <img
+              src="./352_1.png"
+              width="600"
+              height="450"
+              alt="Recommendation System Chart"
+              style=""
+              class="w-full aspect-[4/3] object-cover rounded-md"
+            />
+            <br>
+            <img
+              src="./352_3.png"
+              width="600"
+              height="600"
+              alt="Sentiment Analysis Chart"
+              class="w-full aspect-square object-cover rounded-md"
+            />
+            <br>
+            <img
+              src="./352_4.png"
+              width="600"
+              height="600"
+              alt="Sentiment Analysis Chart"
+              class="w-full aspect-square object-cover rounded-md"
+            />
+          </div>
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm project-card" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+              <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">League of Legends:
+                <br> Victory Prediction Using ML</h3>
+              <p class="text-sm text-muted-foreground">
+                This project focusses on predicting High Elo (Diamond Ranked) League of Legends game results only looking at its first 10 minutes. 
+              </p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-4 h-4"
+                >
+                  <line x1="12" x2="12" y1="17" y2="22"></line>
+                  <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+                </svg>
+                <span>Python, TensowFlow, scitkit-learn</span>
+              </div>
+              <img
+              src="./league1.png"
+              width="600"
+              height="450"
+              alt="Recommendation System Chart"
+              style=""
+              class="w-full aspect-[4/3] object-cover rounded-md"
+            />
+            <br>
+            <img
+              src="./league2.png"
+              width="600"
+              height="600"
+              alt="Sentiment Analysis Chart"
+              class="w-full aspect-square object-cover rounded-md"
+            />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <p class="text-xs text-muted-foreground">Last Updated: Aug 2024.</p>
+      <nav class="sm:ml-auto flex gap-4 sm:gap-6"></nav>
+    </footer>
+  </div>
+  <!-- JavaScript to handle the theme toggle -->
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        sunIcon.classList.toggle('hidden');
+        moonIcon.classList.toggle('hidden');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.removeItem('theme');
+        }
+    });
+
+    // Apply the saved theme on page load
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+    }
+</script>
+
+    </body>
+</html>
